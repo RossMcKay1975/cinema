@@ -25,22 +25,5 @@ class Film
     SqlRunner.run(sql)
   end
 
-  # def update()
-  #   sql = "UPDATE films SET (title, price) = ($1, $2) WHERE id = $3"
-  #   values = [@title, @price, @id]
-  #   SqlRunner.run(sql, values)
-  # end
 
 end
-
-# def save()
-  #   sql = "INSERT INTO movies (title, genre, budget) VALUES ($1, $2, $3) RETURNING id"
-  #   values = [@title, @genre, @budget]
-  #   movie = SqlRunner.run(sql, values).first
-  #   @id = movie['id'].to_i
-  # end
-
-# def self.delete_all
-#   sql = "DELETE FROM movies"
-#   SqlRunner.run(sql)
-# end

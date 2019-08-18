@@ -4,10 +4,10 @@ require_relative('models/film')
 
 require('pry-byebug')
 
-Ticket.delete_all
-Customer.delete_all
-Ticket.delete_all
-
+# Ticket.delete_all
+# Customer.delete_all
+# Ticket.delete_all
+#
 
 customer1 = Customer.new({'name' => 'Mickey Mouse', 'funds' => 20})
 customer2 = Customer.new({'name' => 'Donald Duck', 'funds' => 15})
