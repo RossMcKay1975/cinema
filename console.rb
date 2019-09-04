@@ -22,7 +22,7 @@ film1.save()
 film2.save()
 
 ticket1 = Ticket.new({'customer_id' => customer1.id, 'film_id' => film1.id})
-ticket2 = Ticket.new({'customer-id' => customer2.id, 'film_id' => film1.id})
+ticket2 = Ticket.new({'customer_id' => customer2.id, 'film_id' => film1.id})
 ticket1.save()
 ticket2.save()
 

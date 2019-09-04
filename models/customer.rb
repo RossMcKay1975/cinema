@@ -26,14 +26,14 @@ attr_accessor :name, :funds
   end
 
   #
-  # def films
-  #   sql = "SELECT films.* From films
-  #         INNER JOIN tickets ON tickets.film_id = film.id
-  #         WHERE customer_id = $1"
-  #   values = [@id]
-  #   films_data = SqlRunner.run(sql, values)
-  #   return films_data.map{|film_data| Film.new(film_data)}
-  # end
+  def films
+    sql = "SELECT films.* From films
+          INNER JOIN tickets ON tickets.film_id = films.id
+          WHERE customer_id = $1"
+    values = [@id]
+    films_data = SqlRunner.run(sql, values)
+    return films_data.map{|film_data| Film.new(film_data)}
+  end
 
   def self.delete_all
     sql = "DELETE FROM customers"
@@ -42,4 +42,3 @@ attr_accessor :name, :funds
 
 
 end
-  
